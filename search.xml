@@ -4,19 +4,6 @@
   
     
     <entry>
-      <title>Hello World</title>
-      <link href="2020/10/16/hello-world/"/>
-      <url>2020/10/16/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>cloudreve搭建</title>
       <link href="2020/10/10/cloudreve-da-jian/"/>
       <url>2020/10/10/cloudreve-da-jian/</url>
@@ -24,6 +11,18 @@
         <content type="html"><![CDATA[<h3 id="获取-Cloudreve"><a href="#获取-Cloudreve" class="headerlink" title="获取 Cloudreve"></a>获取 Cloudreve</h3><p>在<a href="https://github.com/cloudreve/Cloudreve/releases">GITHUB项目下载页</a>找到准备下载的项目，右键复制链接地址，一般咱们要下载的是cloudreve_*****_linux_amd64.tar.gz这个文件的，直接右键复制链接地址。</p><h3 id="下载程序包以及安装"><a href="#下载程序包以及安装" class="headerlink" title="下载程序包以及安装"></a>下载程序包以及安装</h3><p>在linux上下载东西一般用wget，我这次是默认装在默认文件夹的，也就是进了系统后没进入任何文件夹时的操作流程。</p><p>1 在linux上先输入 wget，wget后面留一个空格，然后把刚才复制的链接地址复制到空格后面，点击回车（报错wget发现不了的话自己去自己的系统怎么安装wget）如果没报错，最后在两个“”之间会提示你下载好的包的名字。</p><p>2 然后执行下列命令<br>解压获取到的主程序(这里要加上下载的包名)</p><pre><code>tar -zxvf</code></pre><p>赋予执行权限</p><pre><code>chmod +x ./cloudreve</code></pre><p>启动 Cloudreve</p><pre><code>./cloudreve</code></pre><p>这里初步安装就搞定了，云盘也能进入。但是你会发现你ssh不能输入命令了，这是Ctrl+c发现会退出程序，云盘也进不去。不要慌，记下初始账号和密码，然后Ctrl+C退出，接下来咱们进行进程守护。<br><code>记下初始账号和密码！ 记下初始账号和密码！ 记下初始账号和密码！</code></p><h3 id="进程守护"><a href="#进程守护" class="headerlink" title="进程守护"></a>进程守护</h3><p>编辑配置文件</p><pre><code>vim /usr/lib/systemd/system/cloudreve.service</code></pre><p>将下文 root 更换为程序所在目录：</p><pre><code>[Unit]Description=CloudreveDocumentation=https://docs.cloudreve.orgAfter=network.targetWants=network.target[Service]WorkingDirectory=/rootExecStart=/root/cloudreveRestart=on-abnormalRestartSec=5sKillMode=mixedStandardOutput=nullStandardError=syslog[Install]WantedBy=multi-user.target</code></pre><p>更新配置</p><pre><code>systemctl daemon-reload</code></pre><p>启动服务</p><pre><code>systemctl start cloudreve</code></pre><p>设置开机启动</p><pre><code>systemctl enable cloudreve</code></pre><h3 id="管理命令"><a href="#管理命令" class="headerlink" title="管理命令"></a>管理命令</h3><p>启动服务</p><pre><code>systemctl start cloudreve</code></pre><p>停止服务</p><pre><code>systemctl stop cloudreve</code></pre><p>重启服务</p><pre><code>systemctl restart cloudreve</code></pre><p>查看状态</p><pre><code>systemctl status cloudreve</code></pre>]]></content>
       
       
+      <categories>
+          
+          <category> 搭建 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 云盘 </tag>
+            
+        </tags>
       
     </entry>
     
