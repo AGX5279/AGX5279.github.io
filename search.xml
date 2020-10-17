@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>hexo+Gitee安装部署完整过程</title>
+      <link href="2020/10/17/hexo-gitee-an-zhuang-bu-shu-wan-zheng-guo-cheng/"/>
+      <url>2020/10/17/hexo-gitee-an-zhuang-bu-shu-wan-zheng-guo-cheng/</url>
+      
+        <content type="html"><![CDATA[<h1 id="什么是-Hexo？"><a href="#什么是-Hexo？" class="headerlink" title="什么是 Hexo？"></a>什么是 Hexo？</h1><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p><h2 id="部署前准备"><a href="#部署前准备" class="headerlink" title="部署前准备"></a>部署前准备</h2><h3 id="安装-git"><a href="#安装-git" class="headerlink" title="安装 git"></a>安装 git</h3><p><a href="https://git-scm.com/">https://git-scm.com/</a></p><h3 id="安装-nodejs"><a href="#安装-nodejs" class="headerlink" title="安装 nodejs"></a>安装 nodejs</h3><p><a href="https://nodejs.org/en/">https://nodejs.org/en/</a></p><h4 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h4><p>安装时，选择自己电脑合适的位数（32 64位），安装时如果不是太懂一路回车即可。</p><h2 id="开始部署"><a href="#开始部署" class="headerlink" title="开始部署"></a>开始部署</h2><h3 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h3><p>点击鼠标右键，修改为淘宝npm源<br>![](/images/Hexo+Gitee安装部署完整过程 2.png)</p><pre><code>npm config set registry https://registry.npm.taobao.org</code></pre><p>配置后可通过下面方式来验证是否成功</p><pre><code>npm config get registry</code></pre><p>或</p><pre><code>npm info express</code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ServerStatus-Hotaru云探针的安装与配置</title>
       <link href="2020/10/17/serverstatus-hotaru-yun-tan-zhen-de-an-zhuang-yu-pei-zhi/"/>
       <url>2020/10/17/serverstatus-hotaru-yun-tan-zhen-de-an-zhuang-yu-pei-zhi/</url>
