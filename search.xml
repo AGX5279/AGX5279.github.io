@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Markdown语法全面详解</title>
+      <link href="2020/10/20/markdown-yu-fa-quan-mian-xiang-jie/"/>
+      <url>2020/10/20/markdown-yu-fa-quan-mian-xiang-jie/</url>
+      
+        <content type="html"><![CDATA[<h1 id="什么是Markdown？"><a href="#什么是Markdown？" class="headerlink" title="什么是Markdown？"></a>什么是Markdown？</h1><p>Markdown 是一种通过标记字符，对内容进行样式更改的语法。</p><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><table><thead><tr><th align="center">功能</th><th align="center">快捷键</th></tr></thead><tbody><tr><td align="center">加粗</td><td align="center">Ctrl + B</td></tr><tr><td align="center">斜体</td><td align="center">Ctrl + I</td></tr><tr><td align="center">引用</td><td align="center">Ctrl + Q</td></tr><tr><td align="center">插入链接</td><td align="center">Ctrl + L</td></tr><tr><td align="center">插入代码</td><td align="center">Ctrl + K</td></tr><tr><td align="center">插入图片</td><td align="center">Ctrl + G</td></tr><tr><td align="center">提升标题</td><td align="center">Ctrl + H</td></tr><tr><td align="center">有序列表</td><td align="center">Ctrl + O</td></tr><tr><td align="center">无序列表</td><td align="center">Ctrl + U</td></tr><tr><td align="center">横线</td><td align="center">Ctrl + R</td></tr><tr><td align="center">撤销</td><td align="center">Ctrl + Z</td></tr><tr><td align="center">重做</td><td align="center">Ctrl + Y</td></tr></tbody></table><h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><h3 id="字体设置斜体、粗体、删除线"><a href="#字体设置斜体、粗体、删除线" class="headerlink" title="字体设置斜体、粗体、删除线"></a>字体设置斜体、粗体、删除线</h3><pre><code>*这里是文字* #正常文字_这里是文字_ #倾斜**这里是文字** #加粗***这里是文字*** #倾斜加粗~~这里是文字~~ #下划线</code></pre><ul><li>效果如下</li></ul><hr><p><em>这里是文字</em><br><em>这里是文字</em><br><strong>这里是文字</strong><br><strong><em>这里是文字</em></strong><br><del>这里是文字</del></p><h3 id="分级标题"><a href="#分级标题" class="headerlink" title="分级标题"></a>分级标题</h3><pre><code># 一级标题## 二级标题### 三级标题#### 四级标题##### 五级标题###### 六级标题</code></pre><h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><h4 id="1-插入图片"><a href="#1-插入图片" class="headerlink" title="1.插入图片"></a>1.插入图片</h4><pre><code>![1.](2.)1.这里写图片描述2.这里填自己的图片路径文件路径是自己博客图片的图片路径或者是网络上的图片链接,图片描述可以不写</code></pre><h4 id="2-网址转跳"><a href="#2-网址转跳" class="headerlink" title="2.网址转跳"></a>2.网址转跳</h4><pre><code>[这里写文字](这里添加网址)或&lt;这里添加网址&gt;</code></pre><ul><li>效果如下</li></ul><hr><p><a href="https://huicaige.gitee.io/">溪樱小屋</a><br><a href="https://huicaige.gitee.io/">https://huicaige.gitee.io</a></p><h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><pre><code>---***</code></pre><ul><li>效果如下</li></ul><hr><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> 语法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hexo+Gitee安装部署完整过程</title>
       <link href="2020/10/17/hexo-gitee-an-zhuang-bu-shu-wan-zheng-guo-cheng/"/>
       <url>2020/10/17/hexo-gitee-an-zhuang-bu-shu-wan-zheng-guo-cheng/</url>
