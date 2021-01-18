@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>脚本库</title>
+      <link href="2021/01/18/jiao-ben-ku/"/>
+      <url>2021/01/18/jiao-ben-ku/</url>
+      
+        <content type="html"><![CDATA[<h2 id="BBR-PIUS"><a href="#BBR-PIUS" class="headerlink" title="BBR PIUS"></a>BBR PIUS</h2><p>wget -N –no-check-certificate “<a href="https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh&quot;">https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh"</a> &amp;&amp; chmod +x tcp.sh &amp;&amp; ./tcp.sh</p><h2 id="wget"><a href="#wget" class="headerlink" title="wget"></a>wget</h2><p>yum -y install wget    #ContOS 安装 wget<br>apt-get install wget   #Debian Ubuntu 安装 wget</p><h2 id="crul"><a href="#crul" class="headerlink" title="crul"></a>crul</h2><p>yum -y install curl    #ContOS 安装 curl<br>apt-get install curl   #Debian Ubuntu 安装 crul</p><h2 id="v2-ui"><a href="#v2-ui" class="headerlink" title="v2-ui"></a>v2-ui</h2><p>bash &lt;(curl -Ls <a href="https://blog.sprov.xyz/v2-ui.sh">https://blog.sprov.xyz/v2-ui.sh</a>)</p><h2 id="Linux-VPS一键添加-删除交换虚拟内存"><a href="#Linux-VPS一键添加-删除交换虚拟内存" class="headerlink" title="Linux VPS一键添加/删除交换虚拟内存"></a>Linux VPS一键添加/删除交换虚拟内存</h2><p>wget <a href="https://www.moerats.com/usr/shell/swap.sh">https://www.moerats.com/usr/shell/swap.sh</a> &amp;&amp; bash swap.sh</p><h2 id="相关数据"><a href="#相关数据" class="headerlink" title="相关数据"></a>相关数据</h2><h3 id="数据库地址"><a href="#数据库地址" class="headerlink" title="数据库地址"></a>数据库地址</h3><p>127.0.0.1</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 部署 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 记录 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Markdown语法全面详解</title>
       <link href="2020/10/20/markdown-yu-fa-quan-mian-xiang-jie/"/>
       <url>2020/10/20/markdown-yu-fa-quan-mian-xiang-jie/</url>
