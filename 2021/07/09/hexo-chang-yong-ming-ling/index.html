@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="cloudreve搭建, 溪樱小屋">
+    <meta name="keywords" content="Hexo常用命令, 溪樱小屋">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>cloudreve搭建 | 溪樱小屋</title>
+    <title>Hexo常用命令 | 溪樱小屋</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -249,12 +249,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/images/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A41.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">cloudreve搭建</h1>
+                    <h1 class="description center-align post-title">Hexo常用命令</h1>
                 </div>
             </div>
         </div>
@@ -371,8 +371,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E4%BA%91%E7%9B%98/">
-                                <span class="chip bg-color">云盘</span>
+                            <a href="/tags/hexo/">
+                                <span class="chip bg-color">hexo</span>
                             </a>
                         
                     </div>
@@ -383,8 +383,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E9%83%A8%E7%BD%B2/" class="post-category">
-                                部署
+                            <a href="/categories/%E8%AF%AD%E6%B3%95/" class="post-category">
+                                语法
                             </a>
                         
                     </div>
@@ -396,21 +396,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-10
+                    2021-07-09
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-18
+                    2021-07-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    461
+                    157
                 </div>
                 
 
@@ -432,51 +432,18 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="获取-Cloudreve"><a href="#获取-Cloudreve" class="headerlink" title="获取 Cloudreve"></a>获取 Cloudreve</h3><p>在<a target="_blank" rel="noopener" href="https://github.com/cloudreve/Cloudreve/releases">GITHUB项目下载页</a>找到准备下载的项目，右键复制链接地址，一般咱们要下载的是cloudreve_*****_linux_amd64.tar.gz这个文件的，直接右键复制链接地址。</p>
-<h3 id="下载程序包以及安装"><a href="#下载程序包以及安装" class="headerlink" title="下载程序包以及安装"></a>下载程序包以及安装</h3><p>在linux上下载东西一般用wget，我这次是默认装在默认文件夹的，也就是进了系统后没进入任何文件夹时的操作流程。</p>
-<p>1 在linux上先输入 wget，wget后面留一个空格，然后把刚才复制的链接地址复制到空格后面，点击回车（报错wget发现不了的话自己去自己的系统怎么安装wget）如果没报错，最后在两个“”之间会提示你下载好的包的名字。</p>
-<p>2 然后执行下列命令<br>解压获取到的主程序(这里要加上下载的包名)</p>
-<pre><code>tar -zxvf</code></pre>
-<p>赋予执行权限</p>
-<pre><code>chmod +x ./cloudreve</code></pre>
-<p>启动 Cloudreve</p>
-<pre><code>./cloudreve</code></pre>
-<p>这里初步安装就搞定了，云盘也能进入。但是你会发现你ssh不能输入命令了，这是Ctrl+c发现会退出程序，云盘也进不去。不要慌，记下初始账号和密码，然后Ctrl+C退出，接下来咱们进行进程守护。<br><code>记下初始账号和密码！ 记下初始账号和密码！ 记下初始账号和密码！</code></p>
-<h3 id="进程守护"><a href="#进程守护" class="headerlink" title="进程守护"></a>进程守护</h3><p>编辑配置文件</p>
-<pre><code>vim /usr/lib/systemd/system/cloudreve.service</code></pre>
-<p>将下文 root 更换为程序所在目录：</p>
-<pre><code>[Unit]
-Description=Cloudreve
-Documentation=https://docs.cloudreve.org
-After=network.target
-Wants=network.target
-
-[Service]
-WorkingDirectory=/root
-ExecStart=/root/cloudreve
-Restart=on-abnormal
-RestartSec=5s
-KillMode=mixed
-
-StandardOutput=null
-StandardError=syslog
-
-[Install]
-WantedBy=multi-user.target</code></pre>
-<p>更新配置</p>
-<pre><code>systemctl daemon-reload</code></pre>
-<p>启动服务</p>
-<pre><code>systemctl start cloudreve</code></pre>
-<p>设置开机启动</p>
-<pre><code>systemctl enable cloudreve</code></pre>
-<h3 id="管理命令"><a href="#管理命令" class="headerlink" title="管理命令"></a>管理命令</h3><p>启动服务</p>
-<pre><code>systemctl start cloudreve</code></pre>
-<p>停止服务</p>
-<pre><code>systemctl stop cloudreve</code></pre>
-<p>重启服务</p>
-<pre><code>systemctl restart cloudreve</code></pre>
-<p>查看状态</p>
-<pre><code>systemctl status cloudreve</code></pre>
+                <h2 id="Hexo常用命令"><a href="#Hexo常用命令" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h2><pre><code>$ hexo n "博客名称"  =&gt; hexo new "博客名称"   #这两个都是创建新文章，前者是简写模式
+$ hexo p  =&gt; hexo publish
+$ hexo g  =&gt; hexo generate  #生成
+$ hexo s  =&gt; hexo server  #启动服务预览
+$ hexo d  =&gt; hexo deploy  #部署</code></pre>
+<h2 id="关于hexo的服务器命令"><a href="#关于hexo的服务器命令" class="headerlink" title="关于hexo的服务器命令"></a>关于hexo的服务器命令</h2><pre><code>$ hexo server   #Hexo 会监视文件变动并自动更新，无须重启服务器。
+$ hexo server -s   #静态模式
+$ hexo server -p 5000   #更改端口
+$ hexo server -i 192.168.1.1   #自定义IP
+$ hexo clean   #清除缓存，网页正常情况下可以忽略此条命令
+$ hexo g   #生成静态网页
+$ hexo d   #开始部署</code></pre>
 
             </div>
             <hr/>
@@ -502,7 +469,7 @@ WantedBy=multi-user.target</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://git.huigu.xyz/2020/10/10/cloudreve-da-jian/">https://git.huigu.xyz/2020/10/10/cloudreve-da-jian/</a>
+                    <a href="https://git.huigu.xyz/2021/07/09/hexo-chang-yong-ming-ling/">https://git.huigu.xyz/2021/07/09/hexo-chang-yong-ming-ling/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -540,8 +507,8 @@ WantedBy=multi-user.target</code></pre>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E4%BA%91%E7%9B%98/">
-                                    <span class="chip bg-color">云盘</span>
+                                <a href="/tags/hexo/">
+                                    <span class="chip bg-color">hexo</span>
                                 </a>
                             
                         </div>
@@ -972,66 +939,17 @@ WantedBy=multi-user.target</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
-            <div class="card">
-                <a href="/2020/10/17/serverstatus-hotaru-yun-tan-zhen-de-an-zhuang-yu-pei-zhi/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="ServerStatus-Hotaru云探针的安装与配置">
-                        
-                        <span class="card-title">ServerStatus-Hotaru云探针的安装与配置</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-17
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E9%83%A8%E7%BD%B2/" class="post-category">
-                                    部署
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E4%BA%91%E6%8E%A2%E9%92%88/">
-                        <span class="chip bg-color">云探针</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2020/10/10/cloudreve-da-jian/">
+                <a href="/2021/07/09/hexo-chang-yong-ming-ling/">
                     <div class="card-image">
                         
+                        <img src="/images/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A41.png" class="responsive-img" alt="Hexo常用命令">
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="cloudreve搭建">
-                        
-                        <span class="card-title">cloudreve搭建</span>
+                        <span class="card-title">Hexo常用命令</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1042,14 +960,14 @@ WantedBy=multi-user.target</code></pre>
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-09
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%83%A8%E7%BD%B2/" class="post-category">
-                                    部署
+                            <a href="/categories/%E8%AF%AD%E6%B3%95/" class="post-category">
+                                    语法
                                 </a>
                             
                             
@@ -1060,8 +978,56 @@ WantedBy=multi-user.target</code></pre>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E4%BA%91%E7%9B%98/">
-                        <span class="chip bg-color">云盘</span>
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/07/09/centos7-cha-kan-he-guan-bi-fang-huo-qiang/">
+                    <div class="card-image">
+                        
+                        <img src="/images/CentOS7%E6%9F%A5%E7%9C%8B%E5%92%8C%E5%85%B3%E9%97%AD%E9%98%B2%E7%81%AB%E5%A2%991.jfif" class="responsive-img" alt="CentOS7查看和关闭防火墙">
+                        
+                        <span class="card-title">CentOS7查看和关闭防火墙</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
+                                    教程
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
                     </a>
                     
                 </div>

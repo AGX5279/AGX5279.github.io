@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Hexo常用命令</title>
+      <link href="2021/07/09/hexo-chang-yong-ming-ling/"/>
+      <url>2021/07/09/hexo-chang-yong-ming-ling/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Hexo常用命令"><a href="#Hexo常用命令" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h2><pre><code>$ hexo n "博客名称"  =&gt; hexo new "博客名称"   #这两个都是创建新文章，前者是简写模式$ hexo p  =&gt; hexo publish$ hexo g  =&gt; hexo generate  #生成$ hexo s  =&gt; hexo server  #启动服务预览$ hexo d  =&gt; hexo deploy  #部署</code></pre><h2 id="关于hexo的服务器命令"><a href="#关于hexo的服务器命令" class="headerlink" title="关于hexo的服务器命令"></a>关于hexo的服务器命令</h2><pre><code>$ hexo server   #Hexo 会监视文件变动并自动更新，无须重启服务器。$ hexo server -s   #静态模式$ hexo server -p 5000   #更改端口$ hexo server -i 192.168.1.1   #自定义IP$ hexo clean   #清除缓存，网页正常情况下可以忽略此条命令$ hexo g   #生成静态网页$ hexo d   #开始部署</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 语法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CentOS7查看和关闭防火墙</title>
       <link href="2021/07/09/centos7-cha-kan-he-guan-bi-fang-huo-qiang/"/>
       <url>2021/07/09/centos7-cha-kan-he-guan-bi-fang-huo-qiang/</url>
