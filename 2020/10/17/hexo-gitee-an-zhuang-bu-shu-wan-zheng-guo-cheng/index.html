@@ -31,7 +31,7 @@
 
 <meta name="generator" content="Hexo 5.2.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+</head>
 
 
 
@@ -431,6 +431,9 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
@@ -441,17 +444,17 @@
 <h3 id="安装-nodejs"><a href="#安装-nodejs" class="headerlink" title="安装 nodejs"></a>安装 nodejs</h3><p><a target="_blank" rel="noopener" href="https://nodejs.org/en/">https://nodejs.org/en/</a></p>
 <h4 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h4><p>安装时，选择自己电脑合适的位数（32 64位），安装时如果不是太懂一路回车即可。</p>
 <h2 id="开始部署"><a href="#开始部署" class="headerlink" title="开始部署"></a>开始部署</h2><h3 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h3><p>点击鼠标右键，修改为淘宝npm源<br><img src="/images/Hexo+Gitee%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B2.png"></p>
-<pre><code>npm config set registry https://registry.npm.taobao.org</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">npm config set registry https://registry.npm.taobao.org<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
-<li>配置后可通过下面方式来验证是否成功<pre><code>npm config get registry</code></pre>
-或<pre><code>npm info express</code></pre>
-<img src="/images/Hexo+Gitee%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B3.png"><h3 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h3><h4 id="1-在自己喜欢的位置建个Hexo文件夹"><a href="#1-在自己喜欢的位置建个Hexo文件夹" class="headerlink" title="1.在自己喜欢的位置建个Hexo文件夹"></a>1.在自己喜欢的位置建个Hexo文件夹</h4>例如我新建的是D盘，Hexo下的blog文件夹<pre><code>cd D:hexo/blog</code></pre>
-<h4 id="2-在当前目录下安装Hexo"><a href="#2-在当前目录下安装Hexo" class="headerlink" title="2.在当前目录下安装Hexo"></a>2.在当前目录下安装Hexo</h4><pre><code>npm install -g hexo-cli</code></pre>
-<h4 id="3-检测hexo是否安装成功"><a href="#3-检测hexo是否安装成功" class="headerlink" title="3.检测hexo是否安装成功"></a>3.检测hexo是否安装成功</h4><pre><code>hexo -v</code></pre>
-<img src="/images/Hexo+Gitee%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B4.png"><h4 id="4-初始化hexo"><a href="#4-初始化hexo" class="headerlink" title="4.初始化hexo"></a>4.初始化hexo</h4><pre><code>hexo init blog</code></pre>
-blog是会创建一个blog文件夹，如果不在hexo init后面加<strong>blog</strong>的话，会在你当前的文件夹下初始化hexo<h4 id="5-转到刚刚初始化的blog文件夹下"><a href="#5-转到刚刚初始化的blog文件夹下" class="headerlink" title="5.转到刚刚初始化的blog文件夹下"></a>5.转到刚刚初始化的blog文件夹下</h4><pre><code>cd blog/</code></pre>
-这时你会发现里面新建了很多文件夹。<h4 id="6-生成静态文件"><a href="#6-生成静态文件" class="headerlink" title="6.生成静态文件"></a>6.生成静态文件</h4><pre><code>hexo g</code></pre>
-<h4 id="7-启动服务器"><a href="#7-启动服务器" class="headerlink" title="7.启动服务器"></a>7.启动服务器</h4><pre><code>hexo s</code></pre>
+<li>配置后可通过下面方式来验证是否成功<pre class="line-numbers language-none"><code class="language-none">npm config get registry<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+或<pre class="line-numbers language-none"><code class="language-none">npm info express<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<img src="/images/Hexo+Gitee%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B3.png"><h3 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h3><h4 id="1-在自己喜欢的位置建个Hexo文件夹"><a href="#1-在自己喜欢的位置建个Hexo文件夹" class="headerlink" title="1.在自己喜欢的位置建个Hexo文件夹"></a>1.在自己喜欢的位置建个Hexo文件夹</h4>例如我新建的是D盘，Hexo下的blog文件夹<pre class="line-numbers language-none"><code class="language-none">cd D:hexo/blog<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="2-在当前目录下安装Hexo"><a href="#2-在当前目录下安装Hexo" class="headerlink" title="2.在当前目录下安装Hexo"></a>2.在当前目录下安装Hexo</h4><pre class="line-numbers language-none"><code class="language-none">npm install -g hexo-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="3-检测hexo是否安装成功"><a href="#3-检测hexo是否安装成功" class="headerlink" title="3.检测hexo是否安装成功"></a>3.检测hexo是否安装成功</h4><pre class="line-numbers language-none"><code class="language-none">hexo -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<img src="/images/Hexo+Gitee%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B4.png"><h4 id="4-初始化hexo"><a href="#4-初始化hexo" class="headerlink" title="4.初始化hexo"></a>4.初始化hexo</h4><pre class="line-numbers language-none"><code class="language-none">hexo init blog<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+blog是会创建一个blog文件夹，如果不在hexo init后面加<strong>blog</strong>的话，会在你当前的文件夹下初始化hexo<h4 id="5-转到刚刚初始化的blog文件夹下"><a href="#5-转到刚刚初始化的blog文件夹下" class="headerlink" title="5.转到刚刚初始化的blog文件夹下"></a>5.转到刚刚初始化的blog文件夹下</h4><pre class="line-numbers language-none"><code class="language-none">cd blog/<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+这时你会发现里面新建了很多文件夹。<h4 id="6-生成静态文件"><a href="#6-生成静态文件" class="headerlink" title="6.生成静态文件"></a>6.生成静态文件</h4><pre class="line-numbers language-none"><code class="language-none">hexo g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="7-启动服务器"><a href="#7-启动服务器" class="headerlink" title="7.启动服务器"></a>7.启动服务器</h4><pre class="line-numbers language-none"><code class="language-none">hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 访问：<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a>,出现如下页面就代表你搭建成功了<br><img src="/images/Hexo+Gitee%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B5.png"></li>
 </ul>
 <h2 id="Gitee环境部署"><a href="#Gitee环境部署" class="headerlink" title="Gitee环境部署"></a>Gitee环境部署</h2><h3 id="注册gitee账号"><a href="#注册gitee账号" class="headerlink" title="注册gitee账号"></a>注册<a target="_blank" rel="noopener" href="https://gitee.com/">gitee</a>账号</h3><p>注意在填写个人地址的时候要注意保存好，后面会用到。</p>
@@ -459,21 +462,19 @@ blog是会创建一个blog文件夹，如果不在hexo init后面加<strong>blog
 <h3 id="填写信息-创建仓库"><a href="#填写信息-创建仓库" class="headerlink" title="填写信息,创建仓库"></a>填写信息,创建仓库</h3><p><img src="/images/Hexo+Gitee%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B7.png"></p>
 <p>新建仓库时名称最好是保持跟你注册时的个人空间地址是一样的。因为这样你就不会生成二级域名了。如果不跟注册时的个人空间地址一样的话，到时候自己的网站就会有二级域名的存在了。</p>
 <h3 id="部署静态服务"><a href="#部署静态服务" class="headerlink" title="部署静态服务"></a>部署静态服务</h3><p><img src="/images/Hexo+Gitee%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B7.png"><br>点击服务，Gitee Pages。<br><img src="/images/Hexo+Gitee%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B8.png"><br>选择强制使用HTTPS,然后启动。<br>这个时候就会给你生成一个类似https://{你的个人空间地址}.gitee.io（仓库名跟个人空间地址一致）或者https://{你的个人空间地址}.gitee.io/{你的仓库名}（仓库名跟个人空间地址不一致）这样的网址。<br>至此，你的gitee的静态页面服务就搭建好了。剩下的就是配置git上传到Gitee的权限了。</p>
-<h3 id="SSH配置"><a href="#SSH配置" class="headerlink" title="SSH配置"></a>SSH配置</h3><h4 id="1-本地生成秘钥"><a href="#1-本地生成秘钥" class="headerlink" title="1.本地生成秘钥"></a>1.本地生成秘钥</h4><pre><code>git config --global user.name "你的空间地址"</code></pre>
-<pre><code>git config --global user.email "你的邮箱"</code></pre>
-<pre><code>ssh-keygen -t rsa -C "你的邮箱"</code></pre>
+<h3 id="SSH配置"><a href="#SSH配置" class="headerlink" title="SSH配置"></a>SSH配置</h3><h4 id="1-本地生成秘钥"><a href="#1-本地生成秘钥" class="headerlink" title="1.本地生成秘钥"></a>1.本地生成秘钥</h4><pre class="line-numbers language-none"><code class="language-none">git config --global user.name "你的空间地址"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">git config --global user.email "你的邮箱"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">ssh-keygen -t rsa -C "你的邮箱"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>默认生成秘钥key在C:\Users\电脑用户名.ssh文件夹下。</p>
 <h4 id="2-添加本地秘钥到Gitee"><a href="#2-添加本地秘钥到Gitee" class="headerlink" title="2.添加本地秘钥到Gitee"></a>2.添加本地秘钥到Gitee</h4><p><img src="/images/Hexo+Gitee%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B9.png"><br>在个人设置里，点击SSH公钥，添加公钥，标题自己随便选，公钥就是本地生成的<strong>id_rsa.pub</strong>里面的内容。</p>
-<pre><code>ssh -T git@github.com</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">ssh -T git@github.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>检查下配置是否成功。</p>
 <h3 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h3><h4 id="1-配置发布地址"><a href="#1-配置发布地址" class="headerlink" title="1. 配置发布地址"></a>1. 配置发布地址</h4><p>在hexo初始化的blog的配置文件<strong>_config.yml</strong>中配置<br><img src="/images/Hexo+Gitee%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B10.png"></p>
 <h4 id="2-生成静态文件进行发布"><a href="#2-生成静态文件进行发布" class="headerlink" title="2. 生成静态文件进行发布"></a>2. 生成静态文件进行发布</h4><p>打开Git Base命令窗口,到你本地hexo init blog初始化生成的blog文件夹里。</p>
 <ul>
-<li>清除缓存文件 (db.json) 和已生成的静态文件 (public)<pre><code>hexo clean</code></pre>
-</li>
-<li>生成静态文件<pre><code>hexo g</code></pre>
-</li>
-<li>文件生成后立即部署网站<pre><code>hexo deploy</code></pre>
+<li>清除缓存文件 (db.json) 和已生成的静态文件 (public)<pre class="line-numbers language-none"><code class="language-none">hexo clean<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>生成静态文件<pre class="line-numbers language-none"><code class="language-none">hexo g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>文件生成后立即部署网站<pre class="line-numbers language-none"><code class="language-none">hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 这个时候本地的内容就部署到了Gitee上了,如果出现报错，一般谷歌都能找到解决问题。<h3 id="Gitee-Pages更新内容"><a href="#Gitee-Pages更新内容" class="headerlink" title="Gitee Pages更新内容"></a>Gitee Pages更新内容</h3><img src="/images/Hexo+Gitee%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B8.png"><br>在这个界面点击更新，至此，你的Hexo到Gitee的部署就实现了！<br>然后就可以通过https://{你的个人空间地址}.gitee.io（仓库名跟个人空间地址一致）或者https://{你的个人空间地址}.gitee.io/{你的仓库名}（仓库名跟个人空间地址不一致）访问你的网站了。</li>
 </ul>
 
