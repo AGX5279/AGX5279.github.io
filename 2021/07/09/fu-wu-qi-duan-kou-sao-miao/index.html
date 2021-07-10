@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="hexo+Gitee安装部署完整过程, 溪樱小屋">
+    <meta name="keywords" content="服务器端口扫描, 溪樱小屋">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>hexo+Gitee安装部署完整过程 | 溪樱小屋</title>
+    <title>服务器端口扫描 | 溪樱小屋</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -249,12 +249,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/images/Hexo+Gitee%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B1.PNG')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">hexo+Gitee安装部署完整过程</h1>
+                    <h1 class="description center-align post-title">服务器端口扫描</h1>
                 </div>
             </div>
         </div>
@@ -371,8 +371,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/hexo/">
-                                <span class="chip bg-color">hexo</span>
+                            <a href="/tags/VPS/">
+                                <span class="chip bg-color">VPS</span>
                             </a>
                         
                     </div>
@@ -383,8 +383,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E9%83%A8%E7%BD%B2/" class="post-category">
-                                部署
+                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                工具
                             </a>
                         
                     </div>
@@ -396,28 +396,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-17
+                    2021-07-09
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-18
+                    2021-07-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    930
+                    33
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
 
@@ -432,46 +432,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="什么是-Hexo？"><a href="#什么是-Hexo？" class="headerlink" title="什么是 Hexo？"></a>什么是 Hexo？</h1><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<h2 id="部署前准备"><a href="#部署前准备" class="headerlink" title="部署前准备"></a>部署前准备</h2><h3 id="安装-git"><a href="#安装-git" class="headerlink" title="安装 git"></a>安装 git</h3><p><a target="_blank" rel="noopener" href="https://git-scm.com/">https://git-scm.com/</a></p>
-<h3 id="安装-nodejs"><a href="#安装-nodejs" class="headerlink" title="安装 nodejs"></a>安装 nodejs</h3><p><a target="_blank" rel="noopener" href="https://nodejs.org/en/">https://nodejs.org/en/</a></p>
-<h4 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h4><p>安装时，选择自己电脑合适的位数（32 64位），安装时如果不是太懂一路回车即可。</p>
-<h2 id="开始部署"><a href="#开始部署" class="headerlink" title="开始部署"></a>开始部署</h2><h3 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h3><p>点击鼠标右键，修改为淘宝npm源<br><img src="/images/Hexo+Gitee%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B2.png"></p>
-<pre><code>npm config set registry https://registry.npm.taobao.org</code></pre>
-<ul>
-<li>配置后可通过下面方式来验证是否成功<pre><code>npm config get registry</code></pre>
-或<pre><code>npm info express</code></pre>
-<img src="/images/Hexo+Gitee%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B3.png"><h3 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h3><h4 id="1-在自己喜欢的位置建个Hexo文件夹"><a href="#1-在自己喜欢的位置建个Hexo文件夹" class="headerlink" title="1.在自己喜欢的位置建个Hexo文件夹"></a>1.在自己喜欢的位置建个Hexo文件夹</h4>例如我新建的是D盘，Hexo下的blog文件夹<pre><code>cd D:hexo/blog</code></pre>
-<h4 id="2-在当前目录下安装Hexo"><a href="#2-在当前目录下安装Hexo" class="headerlink" title="2.在当前目录下安装Hexo"></a>2.在当前目录下安装Hexo</h4><pre><code>npm install -g hexo-cli</code></pre>
-<h4 id="3-检测hexo是否安装成功"><a href="#3-检测hexo是否安装成功" class="headerlink" title="3.检测hexo是否安装成功"></a>3.检测hexo是否安装成功</h4><pre><code>hexo -v</code></pre>
-<img src="/images/Hexo+Gitee%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B4.png"><h4 id="4-初始化hexo"><a href="#4-初始化hexo" class="headerlink" title="4.初始化hexo"></a>4.初始化hexo</h4><pre><code>hexo init blog</code></pre>
-blog是会创建一个blog文件夹，如果不在hexo init后面加<strong>blog</strong>的话，会在你当前的文件夹下初始化hexo<h4 id="5-转到刚刚初始化的blog文件夹下"><a href="#5-转到刚刚初始化的blog文件夹下" class="headerlink" title="5.转到刚刚初始化的blog文件夹下"></a>5.转到刚刚初始化的blog文件夹下</h4><pre><code>cd blog/</code></pre>
-这时你会发现里面新建了很多文件夹。<h4 id="6-生成静态文件"><a href="#6-生成静态文件" class="headerlink" title="6.生成静态文件"></a>6.生成静态文件</h4><pre><code>hexo g</code></pre>
-<h4 id="7-启动服务器"><a href="#7-启动服务器" class="headerlink" title="7.启动服务器"></a>7.启动服务器</h4><pre><code>hexo s</code></pre>
-访问：<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a>,出现如下页面就代表你搭建成功了<br><img src="/images/Hexo+Gitee%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B5.png"></li>
-</ul>
-<h2 id="Gitee环境部署"><a href="#Gitee环境部署" class="headerlink" title="Gitee环境部署"></a>Gitee环境部署</h2><h3 id="注册gitee账号"><a href="#注册gitee账号" class="headerlink" title="注册gitee账号"></a>注册<a target="_blank" rel="noopener" href="https://gitee.com/">gitee</a>账号</h3><p>注意在填写个人地址的时候要注意保存好，后面会用到。</p>
-<h3 id="新建仓库"><a href="#新建仓库" class="headerlink" title="新建仓库"></a>新建仓库</h3><p><img src="/images/Hexo+Gitee%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B6.png"></p>
-<h3 id="填写信息-创建仓库"><a href="#填写信息-创建仓库" class="headerlink" title="填写信息,创建仓库"></a>填写信息,创建仓库</h3><p><img src="/images/Hexo+Gitee%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B7.png"></p>
-<p>新建仓库时名称最好是保持跟你注册时的个人空间地址是一样的。因为这样你就不会生成二级域名了。如果不跟注册时的个人空间地址一样的话，到时候自己的网站就会有二级域名的存在了。</p>
-<h3 id="部署静态服务"><a href="#部署静态服务" class="headerlink" title="部署静态服务"></a>部署静态服务</h3><p><img src="/images/Hexo+Gitee%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B7.png"><br>点击服务，Gitee Pages。<br><img src="/images/Hexo+Gitee%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B8.png"><br>选择强制使用HTTPS,然后启动。<br>这个时候就会给你生成一个类似https://{你的个人空间地址}.gitee.io（仓库名跟个人空间地址一致）或者https://{你的个人空间地址}.gitee.io/{你的仓库名}（仓库名跟个人空间地址不一致）这样的网址。<br>至此，你的gitee的静态页面服务就搭建好了。剩下的就是配置git上传到Gitee的权限了。</p>
-<h3 id="SSH配置"><a href="#SSH配置" class="headerlink" title="SSH配置"></a>SSH配置</h3><h4 id="1-本地生成秘钥"><a href="#1-本地生成秘钥" class="headerlink" title="1.本地生成秘钥"></a>1.本地生成秘钥</h4><pre><code>git config --global user.name "你的空间地址"</code></pre>
-<pre><code>git config --global user.email "你的邮箱"</code></pre>
-<pre><code>ssh-keygen -t rsa -C "你的邮箱"</code></pre>
-<p>默认生成秘钥key在C:\Users\电脑用户名.ssh文件夹下。</p>
-<h4 id="2-添加本地秘钥到Gitee"><a href="#2-添加本地秘钥到Gitee" class="headerlink" title="2.添加本地秘钥到Gitee"></a>2.添加本地秘钥到Gitee</h4><p><img src="/images/Hexo+Gitee%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B9.png"><br>在个人设置里，点击SSH公钥，添加公钥，标题自己随便选，公钥就是本地生成的<strong>id_rsa.pub</strong>里面的内容。</p>
-<pre><code>ssh -T git@github.com</code></pre>
-<p>检查下配置是否成功。</p>
-<h3 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h3><h4 id="1-配置发布地址"><a href="#1-配置发布地址" class="headerlink" title="1. 配置发布地址"></a>1. 配置发布地址</h4><p>在hexo初始化的blog的配置文件<strong>_config.yml</strong>中配置<br><img src="/images/Hexo+Gitee%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B10.png"></p>
-<h4 id="2-生成静态文件进行发布"><a href="#2-生成静态文件进行发布" class="headerlink" title="2. 生成静态文件进行发布"></a>2. 生成静态文件进行发布</h4><p>打开Git Base命令窗口,到你本地hexo init blog初始化生成的blog文件夹里。</p>
-<ul>
-<li>清除缓存文件 (db.json) 和已生成的静态文件 (public)<pre><code>hexo clean</code></pre>
-</li>
-<li>生成静态文件<pre><code>hexo g</code></pre>
-</li>
-<li>文件生成后立即部署网站<pre><code>hexo deploy</code></pre>
-这个时候本地的内容就部署到了Gitee上了,如果出现报错，一般谷歌都能找到解决问题。<h3 id="Gitee-Pages更新内容"><a href="#Gitee-Pages更新内容" class="headerlink" title="Gitee Pages更新内容"></a>Gitee Pages更新内容</h3><img src="/images/Hexo+Gitee%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B8.png"><br>在这个界面点击更新，至此，你的Hexo到Gitee的部署就实现了！<br>然后就可以通过https://{你的个人空间地址}.gitee.io（仓库名跟个人空间地址一致）或者https://{你的个人空间地址}.gitee.io/{你的仓库名}（仓库名跟个人空间地址不一致）访问你的网站了。</li>
-</ul>
+                <h2 id="服务器端口扫描网址"><a href="#服务器端口扫描网址" class="headerlink" title="服务器端口扫描网址"></a>服务器端口扫描网址</h2><p>国内端口扫描：<a target="_blank" rel="noopener" href="http://tool.chinaz.com/port/">http://tool.chinaz.com/port/</a><br>国外端口扫描：<a target="_blank" rel="noopener" href="https://www.yougetsignal.com/tools/open-ports/">https://www.yougetsignal.com/tools/open-ports/</a></p>
 
             </div>
             <hr/>
@@ -497,7 +458,7 @@ blog是会创建一个blog文件夹，如果不在hexo init后面加<strong>blog
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://git.huigu.xyz/2020/10/17/hexo-gitee-an-zhuang-bu-shu-wan-zheng-guo-cheng/">https://git.huigu.xyz/2020/10/17/hexo-gitee-an-zhuang-bu-shu-wan-zheng-guo-cheng/</a>
+                    <a href="https://git.huigu.xyz/2021/07/09/fu-wu-qi-duan-kou-sao-miao/">https://git.huigu.xyz/2021/07/09/fu-wu-qi-duan-kou-sao-miao/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -535,8 +496,8 @@ blog是会创建一个blog文件夹，如果不在hexo init后面加<strong>blog
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/hexo/">
-                                    <span class="chip bg-color">hexo</span>
+                                <a href="/tags/VPS/">
+                                    <span class="chip bg-color">VPS</span>
                                 </a>
                             
                         </div>
@@ -967,16 +928,18 @@ blog是会创建一个blog文件夹，如果不在hexo init后面加<strong>blog
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/10/20/markdown-yu-fa-quan-mian-xiang-jie/">
+                <a href="/2021/07/09/fu-wu-qi-duan-kou-sao-miao/">
                     <div class="card-image">
                         
-                        <img src="/images/Markdown%E8%AF%AD%E6%B3%95%E5%85%A8%E9%9D%A2%E8%AF%A6%E8%A7%A31.png" class="responsive-img" alt="Markdown语法全面详解">
                         
-                        <span class="card-title">Markdown语法全面详解</span>
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="服务器端口扫描">
+                        
+                        <span class="card-title">服务器端口扫描</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -986,9 +949,58 @@ blog是会创建一个blog文件夹，如果不在hexo init后面加<strong>blog
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-20
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    工具
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/VPS/">
+                        <span class="chip bg-color">VPS</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/07/09/hexo-chang-yong-ming-ling/">
+                    <div class="card-image">
+                        
+                        <img src="/images/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A41.png" class="responsive-img" alt="Hexo常用命令">
+                        
+                        <span class="card-title">Hexo常用命令</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1004,57 +1016,8 @@ blog是会创建一个blog文件夹，如果不在hexo init后面加<strong>blog
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/markdown/">
-                        <span class="chip bg-color">markdown</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/10/17/serverstatus-hotaru-yun-tan-zhen-de-an-zhuang-yu-pei-zhi/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="ServerStatus-Hotaru云探针的安装与配置">
-                        
-                        <span class="card-title">ServerStatus-Hotaru云探针的安装与配置</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-17
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E9%83%A8%E7%BD%B2/" class="post-category">
-                                    部署
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E4%BA%91%E6%8E%A2%E9%92%88/">
-                        <span class="chip bg-color">云探针</span>
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
                     </a>
                     
                 </div>
